@@ -12,7 +12,7 @@ module Dynaspan
 
     initializer 'dynaspan.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
-        helper Dynaspan::ApplicationHelper
+        ::ActionController::Base.send(:include, Dynaspan::ApplicationHelper)
       end
     end
 
