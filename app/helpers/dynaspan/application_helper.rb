@@ -59,6 +59,7 @@ module Dynaspan
             choices: options[:choices],                    # For form 'select' field
             options: options.fetch(:options) { Hash.new }, # For form 'select' field
             html_options: options[:html_options],
+            value_to_show: options[:value_to_show],
             block: block
           }
       )

@@ -9,7 +9,7 @@ Dynaspan also accepts updating an attribute for a nested object, but only 1 leve
 
 ### Installation
 
- - [ ] Add `gem 'dynaspan'` to your Gemfile
+ - [ ] Add `gem "dynaspan", git: "https://github.com/ruslankurmanaleev/dynaspan.git"` to your Gemfile
  - [ ] Run `bundle`
  - [ ] Next add `include Dynaspan::ApplicationHelper` inside your **ApplicationHelper** module
  - [ ] Add `//= require dynaspan/dynaspan` to your **application.js** file
@@ -77,6 +77,7 @@ The options Hash currently has these options.
  - **:html_options** add your own html options to the input field.  Includes ability to add additional classes with `html_options: {class: "example"}`.  **:id**, **:onfocus**, and **:onblur** are reserved.
  - **:choices** used for **dynaspan_select** for the choices of the select box.
  - **:options** used for **dynaspan_select** for the options of the select box; such as **:disabled**, **:prompt**, or **:include_blank**.
+ - **:value_to_show** used for **dynaspan_select** to provide a value for text span (not theselect box)
  - **&block** used only with **dynaspan_select** for passing a block to Rails' form select method.
 
 ### How it updates
@@ -119,6 +120,9 @@ calling parents with selectors.  Example usage:
 
 ### What's New
 
+#### Version 0.1.5.1
+
+Added **value_to_show** parameter to the **dynaspan_select** allowing to set the value for a span.
 
 #### Version 0.1.4 & 0.1.5
 
@@ -134,8 +138,6 @@ Added **dynaspan_select** for having a select box dynamically appear.
  - Added **:choices** used for **dynaspan_select** for the choices of the select box.
  - Added **:options** used for **dynaspan_select** for the options of the select box; such as **:disabled**, **:prompt**, or **:include_blank**.
  - Added **&block** used only with **dynaspan_select** for passing a block to Rails' form select method.
-
-
 
 #### Version 0.1.2
 
